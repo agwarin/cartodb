@@ -25,6 +25,7 @@ module Carto
         gme_client = Client.new(client_id, private_key)
         @geocoder_client = GeocoderClient.new(gme_client)
         @usage_metrics = arguments.fetch(:usage_metrics)
+        @log = arguments.fetch(:log)
       end
 
       def cancel
